@@ -4,6 +4,7 @@ import './ListCards.scss'
 
 const ListCards = () => {
   const { listCards } = useListCards();
+  console.log(listCards)
   return (
     <div className="list-cards">
       <div className="list-cards__card">
