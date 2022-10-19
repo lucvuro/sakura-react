@@ -1,13 +1,43 @@
-import React from 'react'
-import useListCards from './hook/useListCards'
+import React from "react";
+import useListCards from "./hook/useListCards";
+import './ListCards.scss'
 
 const ListCards = () => {
-    const {listCards} = useListCards()
+  const { listCards } = useListCards();
   return (
-    <div className="list-cards__container">
-        
+    <div className="list-cards">
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
+      <div className="list-cards__card">
+        <img src="https://static.wikia.nocookie.net/ccs/images/8/80/ClowArrow.jpg" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ListCards
+export default ListCards;

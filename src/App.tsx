@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
-import "./App.css";
+import "./App.scss";
 import { Outlet, useNavigate } from "react-router";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/lib/layout/layout";
