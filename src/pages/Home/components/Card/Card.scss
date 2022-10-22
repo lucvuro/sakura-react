@@ -14,11 +14,11 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.card:hover{
-    opacity: unset;
-    .card-inner {
-        transform: rotateY(180deg);
-      }
+.card:hover {
+  opacity: unset;
+  .card-inner {
+    transform: rotateY(180deg);
+  }
 }
 .card-front,
 .card-back {

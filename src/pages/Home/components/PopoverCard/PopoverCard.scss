@@ -1,0 +1,14 @@
+.popover-card{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .title{
+        text-align: center;
+        h2{
+            margin-bottom: 0;
+        }
+    }
+    .ant-divider-horizontal{
+        margin: 0px;
+    }
+}
