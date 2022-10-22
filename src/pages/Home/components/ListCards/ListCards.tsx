@@ -1,5 +1,6 @@
 import { Spin } from "antd";
 import React from "react";
+import Card from "../Card";
 import useListCards from "./hook/useListCards";
 import "./ListCards.scss";
 
@@ -12,7 +13,7 @@ const ListCards = () => {
           return (
             <React.Fragment key={item.id}>
               <div className="list-cards__card">
-                <img src={item.data.link_clow} alt={item.data.link_clow} />
+                <Card card={item.data} />
               </div>
             </React.Fragment>
           );

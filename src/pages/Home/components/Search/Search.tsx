@@ -4,7 +4,7 @@ import './Search.scss'
 const Search = () => {
   return (
     <div className="search-input">
-      <Input.Search size="large"/>
+      <Input.Search size="large" placeholder="Search by name card"/>
     </div>
   );
 };

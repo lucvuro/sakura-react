@@ -1,4 +1,8 @@
 .search-input{
-    .ant-input{
+    .ant-input, .ant-input-group-addon{
+        opacity: 0.75;
+    }
+    .ant-input:focus, .ant-input-group-addon:focus{
+        opacity: 1;
     }
 }
