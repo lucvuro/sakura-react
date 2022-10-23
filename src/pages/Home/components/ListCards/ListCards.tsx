@@ -13,7 +13,7 @@ const ListCards = () => {
           return (
             <React.Fragment key={item.id}>
               <div className="list-cards__card">
-                <Card card={item.data} />
+                <Card card={item} />
               </div>
             </React.Fragment>
           );

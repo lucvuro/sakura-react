@@ -1,0 +1,63 @@
+$body: #190d23;
+$none: rgba(#fff, 0);
+$card: #f5e3e3;
+$blue: #302e9b;
+$red: #b32b28;
+$yellow: #bdb725;
+.card-detail {
+  width: 100%;
+  display: flex;
+  column-gap: 32px;
+  .information {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 1024px) {
+  .card-detail {
+    flex-direction: column;
+    row-gap: 32px;
+    .information {
+      flex-basis: unset;
+    }
+  }
+}
+.image-detail {
+  width: 200px;
+  height: 440px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  margin: auto;
+  background: #fff;
+  //   border-radius: 5rem;
+  transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0) rotate(1deg);
+  position: relative;
+  animation: rotate 3s linear infinite;
+  & *,
+  & *:before,
+  & *:after,
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .image-front {
+    transform: translate3d(0, 0, 0.1rem) rotateY(0deg);
+    height: 100%;
+    width: 100%;
+  }
+  .image-back {
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transform: translate3d(0, 0, -0.1rem) rotateY(180deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: translate3d(0, 0, 0) rotate3d(1, 1, 0, -360deg) rotate(1deg);
+  }
+}
