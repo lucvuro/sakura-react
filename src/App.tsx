@@ -18,12 +18,12 @@ function App() {
     navigate("/home");
   }, []);
   return (
-    <Layout style={{height: "100%"}}>
+    <Layout>
       <Header>
         <MenuTop />
       </Header>
       <NightSkyBackground>
-        <Content style={{ padding: "24px 48px" }}>
+        <Content style={{ padding: "24px 48px", minHeight: "calc(100vh - 70px - 64px)" }}>
           <Outlet />
         </Content>
       </NightSkyBackground>
