@@ -14,7 +14,6 @@ $yellow: #bdb725;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 50%;
     .ant-typography h1, div.ant-typography-h1, div.ant-typography-h1>textarea, h1.ant-typography{
       margin-bottom: 0;
     }
@@ -37,6 +36,15 @@ $yellow: #bdb725;
     row-gap: 32px;
     .information {
       flex-basis: unset;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .card-detail{
+    .information{
+      &__item{
+        flex-direction: column;
+      }
     }
   }
 }

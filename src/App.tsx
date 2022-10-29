@@ -18,7 +18,7 @@ function App() {
     navigate("/home");
   }, []);
   return (
-    <Layout>
+    <Layout style={{height: "100%"}}>
       <Header>
         <MenuTop />
       </Header>

@@ -1,4 +1,4 @@
-import { Divider, Typography } from "antd";
+import { Descriptions, Divider, Typography } from "antd";
 import React from "react";
 import "./CardDetail.scss";
 import { levelTypo } from "./constant";
@@ -22,40 +22,26 @@ const CardDetail = (props: any) => {
               </Typography.Title>
             </div>
             <Divider />
-            <div className="information__content">
-              <div className="information__item">
-                <div className="information__label">Sign:</div>
-                <div className="information__data">{props.card.sign}</div>
-              </div>
-              <div className="information__item">
-                <div className="information__label">Magic Type:</div>
-                <div className="information__data">{props.card.magicType}</div>
-              </div>
-              <div className="information__item">
-                <div className="information__label">Captured Anime:</div>
-                <div className="information__data">
-                  {props.card.capturedAnime}
-                </div>
-              </div>
-              <div className="information__item">
-                <div className="information__label">Captured Manga:</div>
-                <div className="information__data">
-                  {props.card.capturedManga}
-                </div>
-              </div>
-              <div className="information__item">
-                <div className="information__label">Transformed Anime:</div>
-                <div className="information__data">
-                  {props.card.transformedAnime}
-                </div>
-              </div>
-              <div className="information__item">
-                <div className="information__label">Transformed Manga:</div>
-                <div className="information__data">
-                  {props.card.transformedManga}
-                </div>
-              </div>
-            </div>
+            <Descriptions title="" bordered layout="vertical">
+              <Descriptions.Item label="Sign" labelStyle={{fontWeight: "bold"}}>
+                {props.card.sign}
+              </Descriptions.Item>
+              <Descriptions.Item label="Magic Type" labelStyle={{fontWeight: "bold"}}>
+                {props.card.magicType}
+              </Descriptions.Item>
+              <Descriptions.Item label="Captured Anime" labelStyle={{fontWeight: "bold"}}>
+                {props.card.capturedAnime}
+              </Descriptions.Item>
+              <Descriptions.Item label="Captured Manga" labelStyle={{fontWeight: "bold"}}>
+                {props.card.capturedManga}
+              </Descriptions.Item>
+              <Descriptions.Item label="Transformed Anime" labelStyle={{fontWeight: "bold"}}>
+                {props.card.transformedAnime}
+              </Descriptions.Item>
+              <Descriptions.Item label="Transformed Manga" labelStyle={{fontWeight: "bold"}}>
+                {props.card.transformedManga}
+              </Descriptions.Item>
+            </Descriptions>
           </div>
         </div>
       )}
