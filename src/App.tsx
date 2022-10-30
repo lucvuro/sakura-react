@@ -12,7 +12,7 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation()
   useEffect(() => {
-    if (location.pathname.includes('detail')){
+    if (location.pathname.includes('detail') || location.pathname.includes('login')){
       return;
     }
     navigate("/home");
@@ -23,11 +23,10 @@ function App() {
         <MenuTop />
       </Header>
       <NightSkyBackground>
-        <Content style={{ padding: "24px 48px", minHeight: "calc(100vh - 70px - 64px)" }}>
+        <Content style={{ padding: "24px 48px", minHeight: "calc(100vh - 64px - 7px)" }}>
           <Outlet />
         </Content>
       </NightSkyBackground>
-      <Footer>Footer</Footer>
     </Layout>
   );
 }

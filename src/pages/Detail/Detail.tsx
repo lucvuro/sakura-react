@@ -1,4 +1,4 @@
-import { Skeleton } from "antd";
+import { Skeleton, Spin } from "antd";
 import React from "react";
 import { useParams } from "react-router";
 import CardDetail from "./components/CardDetail";
@@ -9,9 +9,11 @@ const Detail = () => {
   const { cardDetail, loading } = useDetail({ params });
   return (
     <>
-      <div className="detail">
+      <Spin spinning={loading}>
+        <div className="detail">
           <CardDetail card={cardDetail} />
-      </div>
+        </div>
+      </Spin>
     </>
   );
 };
