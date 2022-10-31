@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
-import { selectCard, setCard } from '../../../features/card/cardSlice'
+import { resetCardModel, selectCard, setCard } from '../../../features/card/cardSlice'
 const useDetail = (props: any) => {
     const dispatch = useAppDispatch()
     const cardModel = useAppSelector(selectCard)
@@ -12,6 +12,9 @@ const useDetail = (props: any) => {
     useEffect(() => {
         if(cardModel.currentCard){
             setCardDetail(cardModel.currentCard)
+        }
+        return () => {
+          dispatch(resetCardModel())
         }  
     }, [cardModel.currentCard])
   return {
