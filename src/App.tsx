@@ -7,16 +7,23 @@ import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/lib/layout/layout";
 import MenuTop from "./components/MenuTop";
 import NightSkyBackground from "./components/NightSkyBackground";
+import useAuthenication from "./hooks/useAuthenication";
 
 function App() {
   const navigate = useNavigate();
   const location = useLocation()
+  const {currentUser} = useAuthenication()
   useEffect(() => {
-    if (location.pathname.includes('detail') || location.pathname.includes('login')){
-      return;
+    const refreshToken = sessionStorage.getItem("refreshToken")
+    if(refreshToken || currentUser){
+      if (location.pathname.includes('detail')){
+        return;
+      }
+      navigate("/home");
+    }else{
+      navigate("/login")
     }
-    navigate("/home");
-  }, []);
+  }, [currentUser, navigate, location.pathname]);
   return (
     <Layout>
       <Header>
