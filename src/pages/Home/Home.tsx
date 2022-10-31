@@ -1,7 +1,7 @@
 import React from "react";
 import ListCards from "./components/ListCards";
 import Search from "./components/Search";
-import Filter from "./components/Filter";
+// import Filter from "./components/Filter";
 import "./Home.scss";
 const Home = () => {
   return (
@@ -10,9 +10,10 @@ const Home = () => {
         <div className="home-page__search-input">
           <Search />
         </div>
-        <div className="home-page__filter-button">
+        {/**Chua tim ra cach hop ly de su dung chuc nang filter*/}
+        {/* <div className="home-page__filter-button">
           <Filter />
-        </div>
+        </div> */}
       </div>
       <div className="home-page__listcards">
         <ListCards />

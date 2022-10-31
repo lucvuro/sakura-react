@@ -1,18 +1,18 @@
-import { Popover } from "antd";
+// import { Popover } from "antd";
 import React from "react";
-import PopoverCard from "../PopoverCard";
+// import PopoverCard from "../PopoverCard";
 import "./Card.scss";
 import useCard from "./hook/useCard";
 const Card = (props: any) => {
     const {onClickCard} = useCard()
   return (
-      <Popover
-      color="rgba(255,255,255,0.7)"
-        mouseEnterDelay={0}
-        mouseLeaveDelay={0}
-        placement="right"
-        content={<PopoverCard card={props.card.data} />}
-      >
+      // <Popover
+      // color="rgba(255,255,255,0.7)"
+      //   mouseEnterDelay={0}
+      //   mouseLeaveDelay={0}
+      //   placement="right"
+      //   content={<PopoverCard card={props.card.data} />}
+      // >
         <div className="card" onClick={() => onClickCard(props.card.id)}>
           <div className="card-inner">
             <div className="card-front">
@@ -23,7 +23,7 @@ const Card = (props: any) => {
             </div>
           </div>
         </div>
-      </Popover>
+      // </Popover>
   );
 };
 

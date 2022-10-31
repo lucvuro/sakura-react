@@ -4,11 +4,13 @@ import { database } from "../../firebase";
 import {
   setCard,
   setListCard,
+  setListCardInit,
   setLoading
 } from "./cardSlice";
 
 function* fetchListCard({payload}: any) {
   yield put(setListCard(payload))
+  yield put(setListCardInit(payload))
 }
 
 function* getCardFromFireStore({payload}: any){
