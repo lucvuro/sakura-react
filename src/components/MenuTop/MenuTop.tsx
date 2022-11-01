@@ -1,4 +1,4 @@
-import { DatabaseFilled } from "@ant-design/icons";
+import { DatabaseFilled, LogoutOutlined } from "@ant-design/icons";
 import { Avatar, Menu } from "antd";
 import React from "react";
 import { useNavigate } from "react-router";
@@ -42,8 +42,8 @@ const MenuTop: React.FC = () => {
       ),
       key: "item-2",
       children: [
-        { label: "Profile", key: "sub-item-1" },
-        { label: <React.Fragment><span onClick={() => onClickLogOut()}>Log out</span></React.Fragment>, key: "sub-item-2" },
+        // { label: "Profile", key: "sub-item-1" },
+        { label: <React.Fragment><span onClick={() => onClickLogOut()}><LogoutOutlined/> Log out</span></React.Fragment>, key: "sub-item-2" },
       ],
     }, // remember to pass the key prop
   ];
